@@ -1,93 +1,105 @@
 <template>
-	<main>
-		<section class="section">
-			<strong class="text-3xl inline-block mb-8">
-				Wellcome to<span class="text-green-500"> Vue </span><span class="text-pink-500">Tailwind</span> 👏🏻
-			</strong>
-			<p class="mb-5">
-				A simple starter template for Vue JS 3 + TailwindCSS and any other tools
-			</p>
-			<a href="https://github.com/or-abdillh/vue-tailwind.git" target="_blank" class="bg-gray-600 hover:bg-opacity-75 focus:ring-2 text-gray-50 px-5 py-2 rounded-lg inline-block">
-				<i class="fab fa-github"></i>
-				<span class="mx-2">Github</span>
-			</a>
-		</section>
+  <main>
+    <section class="section">
+      <strong class="flex place-content-center text-3xl mb-8">
+        <img src="@/assets/icons/logo/EMAHO_logo-line.svg" alt="" />
+      </strong>
+      <p class="mb-5 px-4">
+        Мы — команда профессионалов из Алматы. Мы делаем сайты, SPA и
+        кросс-платформенные мобильные приложения. <abbr class="text-indigo-700 hover:cursor-help" title = "Свяжитесь с нами удобным для Вас способом">Оценим Ваш проект!</abbr>
+      </p>
+      <div class="flex space-x-4 place-content-center">
+        <a
+          class="
+            button cursor-pointer px-3
+          "
+        >
+          <template v-for="(route, i) in routes" :key="i">
+            <a v-if="route.name ==='Портфолио'" @click="movePage(route.to)" class="text-gray-50 px-4">{{
+              route.name
+            }}</a>
+          </template>
+        </a>
+        <a
+          class="
+            button cursor-pointer px-4
+          "
+        >
+          <template v-for="(route, i) in routes" :key="i">
+            <a v-if="route.name ==='Контакты'" @click="movePage(route.to)" class="text-gray-50 px-4">{{
+              route.name
+            }}</a>
+          </template>
+        </a>
+      </div>
+    </section>
 
-		<section class="section flex flex-col items-center gap-3">
-			<small>Current click</small>
-			<h1 class="text-5xl font-medium">{{ count.count }}</h1>
-			<div class="flex gap-4 mt-3">
-				<button @click="count.click()" class="btn-count">Click++</button>
-				<button @click="count.doubleClick()" class="btn-count">Click * 2</button>
-			</div>
-		</section>
 
-		<section class="mb-6">
-			<h1 class="text-xl mb-3">
-				<i class="fa fa-chevron-right"></i>
-				Routes
-			</h1>
-			<div class="flex gap-4">
-				<template v-for="(route, i) in routes" :key="i">
-					<a @click="movePage(route.to)" class="text-green-500 text-lg hover:text-green-200 duration-300">{{ route.name }}</a>
-				</template>
-			</div>			
-		</section>
-		
-		<section>
-			<h1 class="text-xl">
-				<i class="fa fa-chevron-right"></i>
-				All dependencies
-			</h1>
-			<div class="flex flex-wrap gap-2 mt-3">
-				<template v-for="(item, x) in dependencies" :key="x">
-					<Pill :label="item" />						
-				</template>
-			</div>
-		</section>
-		<Footer />
-	</main>
+    <section>
+      <h1 class="font-bold sm:font-normal sm:text-xl text-indigo-700 transform hover:translate-x-60 duration-3000">
+        <i class="fa fa-chevron-right pb-4"></i>
+        Мы неплохо знаем и управляемся с
+      </h1>
+      <div class="flex flex-wrap gap-2 mt-3">
+        <template v-for="(item, x) in dependencies" :key="x">
+          <Pill :label="item" />
+        </template>
+      </div>
+    </section>
+    <Footer />
+  </main>
 </template>
 
 <script setup>
-	import { useCount } from '@/stores/counter'
-	import { useRouter } from 'vue-router'
-	import Pill from '@/components/Pill.vue'
-	import Footer from '@/components/Footer.vue'
-	
-	const count = useCount()
-	const router = useRouter()
+import { useCount } from "@/stores/counter";
+import { useRouter } from "vue-router";
+import Pill from "@/components/Pill.vue";
+import Footer from "@/components/Footer.vue";
 
-	const movePage = to => router.push({ name: to })
-	
-	const dependencies = [
-		"Vue v.3.2.25",
-		"Tailwindcss v.3.0.18",
-		"Vue router v.4.0.12",
-		"Pinia v.2.0.10",
-		"Vite v.2.7.2",
-		"Postcss v.8.4.5",
-		"Autoprefixer v.10.4.2"
-	]
+const count = useCount();
+const router = useRouter();
 
-	const routes = [
-		{
-			name: 'About',
-			to: 'About'
-		},
-		{
-			name: 'Blank screen',
-			to: 'Blank'
-		}
-	]
+const movePage = (to) => router.push({ name: to });
+
+const dependencies = [
+  "JavaScript",
+  "Vue 3",
+  "Flutter",
+  "Dart",
+  "Swift",
+  "Laravel",
+  "MySQL",
+  "1C",
+  "Firebase",
+  "WebSocket",
+  "WebRTC",
+  "...",
+];
+
+const routes = [
+  {
+    name: "Контакты",
+    to: "About",
+  },
+  {
+    name: "Портфолио",
+    to: "Portfolio",
+  },
+];
 </script>
 
 <style scoped>
-	.section {
-		@apply w-full bg-gray-50 py-8 px-5 rounded mb-8;
-	}
+.section {
+  @apply w-full bg-gray-50 border-4 border-gray-700 py-8 px-5 rounded-xl mb-10 sm:mb-16 mt-4 sm:mt-10;
+}
 
-	.btn-count {
-		@apply px-3 py-1 bg-indigo-400 text-gray-50 rounded;
-	}
+.button {
+  @apply bg-gray-800
+          hover:bg-indigo-700
+		  duration-200
+          text-gray-50
+          py-2
+          rounded-lg
+          inline-block;
+}
 </style>

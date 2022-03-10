@@ -4,13 +4,12 @@
       <strong class="flex place-content-center text-3xl mb-8">
         <img src="@/assets/icons/logo/EMAHO_logo-line.svg" alt="" />
       </strong>
-      <p class="mb-5 px-4">
-        <span>Пришлите нам ТЗ или описание задачи. Мы свяжемся с Вами, зададим много вопросов и, если поймем друг друга, оценим проект.</span>
+      <p class="mb-5 px-4 text-5xl text-center text-indigo-700">
+        <span>IN PROGRESS</span>
       </p>
       <div class="flex space-x-6 place-content-center">
         
 		<p class="font-medium"><i class="fa fa-pen pr-2"></i>info@emaho.dev</p>
-		<p class="font-medium"><i class="fa fa-phone pr-2"></i>+7(707)7706737</p>
 		
       </div>
 	  <BackBtn
@@ -52,4 +51,3 @@ import BackBtn from "@/components/BackBtn.vue";
           inline-block;
 }
 </style>
-

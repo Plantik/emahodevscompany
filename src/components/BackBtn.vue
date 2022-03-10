@@ -4,8 +4,7 @@
 </script>
 
 <template>
-	<small @click="router.go(-1)" class="text-green-500">
+	<small @click="router.go(-1)" class="text-green-500 hover:cursor-pointer">
 		<i class="fa fa-chevron-left"></i>
-		Back
 	</small>
 </template>
