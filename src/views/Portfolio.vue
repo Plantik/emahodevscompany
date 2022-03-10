@@ -5,7 +5,7 @@
         <img src="@/assets/icons/logo/EMAHO_logo-line.svg" alt="" />
       </strong>
       <p class="mb-5 px-4 text-5xl text-center text-indigo-700">
-        <span>IN PROGRESS</span>
+        <span>PORTFOLIO IN PROGRESS</span>
       </p>
       <div class="flex space-x-6 place-content-center">
         
