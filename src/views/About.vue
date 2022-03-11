@@ -42,14 +42,15 @@ import BackBtn from "@/components/BackBtn.vue";
 }
 
 .button {
-  @apply bg-gray-800
-          hover:bg-indigo-700
-		  duration-200
-          text-gray-50
-          px-5
-          py-2
-          rounded-lg
-          inline-block;
+  @apply 
+  bg-gray-800
+  hover:bg-indigo-700
+    duration-200
+  text-gray-50
+    px-5
+    py-2
+    rounded-lg
+    inline-block;
 }
 </style>
 

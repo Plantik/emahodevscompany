@@ -6,37 +6,48 @@
       </strong>
       <p class="mb-5 px-4">
         Мы — команда профессионалов из Алматы. Мы делаем сайты, SPA и
-        кросс-платформенные мобильные приложения. <abbr class="text-indigo-700 hover:cursor-help" title = "Свяжитесь с нами удобным для Вас способом">Оценим Ваш проект!</abbr>
+        кросс-платформенные мобильные приложения.
+        <abbr
+          class="text-indigo-700 hover:cursor-help"
+          title="Свяжитесь с нами удобным для Вас способом"
+          >Оценим Ваш проект!</abbr
+        >
       </p>
       <div class="flex space-x-4 place-content-center">
-        <a
-          class="
-            button cursor-pointer px-3
-          "
-        >
+        <a class="button cursor-pointer px-3">
           <template v-for="(route, i) in routes" :key="i">
-            <a v-if="route.name ==='Портфолио'" @click="movePage(route.to)" class="text-gray-50 px-4">{{
-              route.name
-            }}</a>
+            <a
+              v-if="route.name === 'Портфолио'"
+              @click="movePage(route.to)"
+              class="text-gray-50 px-4"
+              >{{ route.name }}</a
+            >
           </template>
         </a>
-        <a
-          class="
-            button cursor-pointer px-4
-          "
-        >
+        <a class="button cursor-pointer px-4">
           <template v-for="(route, i) in routes" :key="i">
-            <a v-if="route.name ==='Контакты'" @click="movePage(route.to)" class="text-gray-50 px-4">{{
-              route.name
-            }}</a>
+            <a
+              v-if="route.name === 'Контакты'"
+              @click="movePage(route.to)"
+              class="text-gray-50 px-4"
+              >{{ route.name }}</a
+            >
           </template>
         </a>
       </div>
     </section>
 
-
     <section>
-      <h1 class="font-bold sm:font-normal sm:text-xl text-indigo-700 transform hover:translate-x-60 duration-3000">
+      <h1
+        class="
+          font-bold
+          sm:font-normal sm:text-xl
+          text-indigo-700
+          transform
+          hover:translate-x-60
+          duration-3000
+        "
+      >
         <i class="fa fa-chevron-right pb-4"></i>
         Мы неплохо знаем и управляемся с
       </h1>
@@ -94,12 +105,13 @@ const routes = [
 }
 
 .button {
-  @apply bg-gray-800
-          hover:bg-indigo-700
-		  duration-200
-          text-gray-50
-          py-2
-          rounded-lg
-          inline-block;
+  @apply 
+  bg-gray-800
+  hover:bg-indigo-700
+		duration-200
+  text-gray-50
+    py-2
+    rounded-lg
+    inline-block;
 }
 </style>

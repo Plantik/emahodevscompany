@@ -8,22 +8,22 @@
         <span>ВЫШЛЕМ ПО ЗАПРОСУ</span>
       </p>
       <div class="flex space-x-6 place-content-center">
-        
-		<p class="font-medium"><i class="fa fa-pen pr-2"></i>info@emaho.dev</p>
-		
+        <p class="font-medium"><i class="fa fa-pen pr-2"></i>info@emaho.dev</p>
       </div>
-	  <BackBtn
-          class="
-            transform
-            hover:-translate-x-0.5 hover:text-indigo-700
-            duration-200
-            absolute md:top-0 md:-left-36
-			-bottom-56 left-0
-            text-gray-800
-            font-bold
-            text-4xl
-          "
-        />
+      <BackBtn
+        class="
+          transform
+          hover:-translate-x-0.5 hover:text-indigo-700
+          duration-200
+          absolute
+          md:top-0 md:-left-36
+          -bottom-56
+          left-0
+          text-gray-800
+          font-bold
+          text-4xl
+        "
+      />
     </section>
     <Footer />
   </main>
@@ -31,8 +31,6 @@
 <script setup>
 import Footer from "@/components/Footer.vue";
 import BackBtn from "@/components/BackBtn.vue";
-
-
 </script>
 
 <style scoped>
@@ -41,13 +39,14 @@ import BackBtn from "@/components/BackBtn.vue";
 }
 
 .button {
-  @apply bg-gray-800
-          hover:bg-indigo-700
-		  duration-200
-          text-gray-50
-          px-5
-          py-2
-          rounded-lg
-          inline-block;
+  @apply 
+  bg-gray-800
+  hover:bg-indigo-700
+	  duration-200
+  text-gray-50
+    px-5
+    py-2
+    rounded-lg
+    inline-block;
 }
 </style>
